@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Fire Sensi Shop 🔥</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f4f4; color: #111; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+
+    /* NAV */
+    nav { background: #1a0a2e; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: #ffa500; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
+    nav .nav-wa { background: #25D366; color: #fff; padding: 7px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 60% 40%, rgba(255,160,0,0.12) 0%, transparent 60%); pointer-events: none; }
+    .fire-badge { display: inline-block; background: #ff6b00; color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; margin-bottom: 1.2rem; }
+    .hero h1 { font-size: 2.6rem; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
+    .hero h1 span { color: #ffa500; }
+    .hero p { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { background: #ff6b00; color: #fff; border: none; padding: 12px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); padding: 12px 28px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); }
+
+    /* STATS */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin: 2rem 0; }
+    .stat-card { background: #fff; border-radius: 10px; padding: 1.2rem; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+    .stat-card .num { font-size: 1.7rem; font-weight: 700; color: #ff6b00; }
+    .stat-card .lbl { font-size: 12px; color: #777; margin-top: 3px; }
+
+    /* SECTION TITLE */
+    .section-title { font-size: 1.15rem; font-weight: 600; color: #111; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: #e0e0e0; }
+
+    /* PRODUCTS */
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; margin-bottom: 2.5rem; }
+    .prod-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 1.2rem; position: relative; transition: border-color 0.2s, box-shadow 0.2s; }
+    .prod-card:hover { border-color: #ff6b00; box-shadow: 0 4px 16px rgba(255,107,0,0.1); }
+    .prod-card .tag { position: absolute; top: 12px; right: 12px; font-size: 10px; padding: 3px 9px; border-radius: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+    .tag-hot { background: rgba(255,60,0,0.1); color: #cc2200; }
+    .tag-new { background: rgba(0,160,100,0.1); color: #006633; }
+    .tag-sale { background: rgba(255,120,0,0.1); color: #bb5500; }
+    .prod-icon { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 0.9rem; }
+    .prod-name { font-size: 15px; font-weight: 600; color: #111; margin-bottom: 5px; }
+    .prod-desc { font-size: 12px; color: #777; margin-bottom: 14px; line-height: 1.6; }
+    .prod-footer { display: flex; align-items: center; justify-content: space-between; }
+    .prod-price { font-size: 18px; font-weight: 700; color: #ff6b00; }
+    .buy-btn { background: #ff6b00; color: #fff; border: none; padding: 7px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: opacity 0.2s; }
+    .buy-btn:hover { opacity: 0.85; }
+
+    /* HOW IT WORKS */
+    .how { background: #fff; border-radius: 14px; padding: 1.8rem; margin-bottom: 2.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 1.2rem; }
+    .step { text-align: center; padding: 1rem 0.5rem; }
+    .step-num { width: 36px; height: 36px; border-radius: 50%; background: #ff6b00; color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
+    .step p { font-size: 12px; color: #777; line-height: 1.6; }
+    .step strong { font-size: 13px; color: #111; display: block; margin-bottom: 4px; }
+
+    /* CONTACT */
+    .contact { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .contact-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 1rem; }
+    .contact-info strong { font-size: 16px; color: #111; display: block; margin-bottom: 4px; }
+    .contact-info p { font-size: 13px; color: #777; }
+    .wa-btn { background: #25D366; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 7px; text-decoration: none; transition: opacity 0.2s; }
+    .wa-btn:hover { opacity: 0.88; }
+    .wa-number-box { background: rgba(37,211,102,0.07); border: 1px solid rgba(37,211,102,0.25); border-radius: 10px; padding: 12px 18px; display: flex; align-items: center; gap: 12px; }
+    .wa-number-box .ti { color: #25D366; font-size: 24px; }
+    .num-label { font-size: 11px; color: #888; margin-bottom: 2px; }
+    .num-val { font-size: 18px; font-weight: 700; color: #111; letter-spacing: 0.5px; }
+
+    /* GUARANTEE */
+    .guarantee { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 3rem; }
+    .g-item { background: #fff; border-radius: 10px; padding: 1rem; display: flex; align-items: center; gap: 10px; font-size: 13px; color: #555; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    .g-item i { color: #ff6b00; font-size: 20px; }
+
+    /* FOOTER */
+    footer { background: #1a0a2e; color: rgba(255,255,255,0.5); text-align: center; padding: 1.5rem; font-size: 13px; }
+    footer span { color: #ffa500; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero { padding: 3rem 1rem; }
+      nav { padding: 0.75rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">🔥 FF Sensi Shop</div>
+    <a class="nav-wa" href="https://wa.me/919787671218?text=Hi!%20I%20want%20to%20order%20a%20Sensi%20Pack" target="_blank">
+      <i class="ti ti-brand-whatsapp"></i> Order Now
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="fire-badge">🔥 Free Fire Sensi Shop</div>
+    <h1>Win Every <span>Gunfight</span><br>With Pro Sensi</h1>
+    <p>Custom sensitivity settings tuned for headshots, fast rotations & clutch wins</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#packages">Browse Sensi Packs</a>
+      <a class="btn-outline" href="#how">How It Works</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-card"><div class="num">500+</div><div class="lbl">Happy Customers</div></div>
+      <div class="stat-card"><div class="num">99%</div><div class="lbl">Delivery Rate</div></div>
+      <div class="stat-card"><div class="num">24/7</div><div class="lbl">Support</div></div>
+      <div class="stat-card"><div class="num">4.9★</div><div class="lbl">Avg Rating</div></div>
+    </div>
+
+    <!-- PACKAGES -->
+    <div id="packages" class="section-title">Sensi Packages</div>
+    <div class="products">
+      <div class="prod-card">
+        <span class="tag tag-hot">HOT</span>
+        <div class="prod-icon" style="background:rgba(255,107,0,0.1)">🎯</div>
+        <div class="prod-name">Basic Sensi Pack</div>
+        <div class="prod-desc">Starter settings — great aim, smooth movement. Perfect for beginners.</div>
+        <div class="prod-footer">
+          <span class="prod-price">₹299</span>
+          <a class="buy-btn" href="https://wa.me/919787671218?text=Hi!%20I%20want%20to%20buy%20Basic%20Sensi%20Pack%20%E2%82%B9299" target="_blank">Buy Now</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <span class="tag tag-new">NEW</span>
+        <div class="prod-icon" style="background:rgba(0,120,255,0.1)">⚡</div>
+        <div class="prod-name">Pro Sensi Pack</div>
+        <div class="prod-desc">Advanced settings for fast flick shots & peek advantage. Ranked ready.</div>
+        <div class="prod-footer">
+          <span class="prod-price">₹399</span>
+          <a class="buy-btn" href="https://wa.me/919787671218?text=Hi!%20I%20want%20to%20buy%20Pro%20Sensi%20Pack%20%E2%82%B9399" target="_blank">Buy Now</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <span class="tag tag-sale">SALE</span>
+        <div class="prod-icon" style="background:rgba(0,200,100,0.1)">🎮</div>
+        <div class="prod-name">Custom Sensi</div>
+        <div class="prod-desc">Fully personalized sensi tuned to your device, playstyle & rank.</div>
+        <div class="prod-footer">
+          <span class="prod-price">₹499</span>
+          <a class="buy-btn" href="https://wa.me/919787671218?text=Hi!%20I%20want%20a%20Custom%20Sensi%20%E2%82%B9499" target="_blank">Buy Now</a>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-icon" style="background:rgba(255,200,0,0.1)">👑</div>
+        <div class="prod-name">Legend Sensi Pack</div>
+        <div class="prod-desc">Top-tier settings used by Grandmaster players. Includes 1-on-1 support.</div>
+        <div class="prod-footer">
+          <span class="prod-price">₹599</span>
+          <a class="buy-btn" href="https://wa.me/919787671218?text=Hi!%20I%20want%20to%20buy%20Legend%20Sensi%20Pack%20%E2%82%B9599" target="_blank">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div id="how" class="how">
+      <div class="section-title" style="margin-bottom:0">How it works</div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><strong>Choose Pack</strong><p>Pick the sensi package that fits your playstyle</p></div>
+        <div class="step"><div class="step-num">2</div><strong>Pay & Share UID</strong><p>Pay via UPI/GPay and send your Free Fire UID</p></div>
+        <div class="step"><div class="step-num">3</div><strong>Get Sensi</strong><p>Receive your sensi file within 5–10 minutes</p></div>
+        <div class="step"><div class="step-num">4</div><strong>Dominate</strong><p>Apply settings and start dropping headshots!</p></div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section-title">Contact & Order</div>
+    <div class="contact">
+      <div class="contact-top">
+        <div class="contact-info">
+          <strong>Order via WhatsApp</strong>
+          <p>Fast response · Instant delivery · 24/7 available</p>
+        </div>
+        <a class="wa-btn" href="https://wa.me/919787671218?text=Hi!%20I%20want%20to%20order%20a%20Sensi%20Pack" target="_blank">
+          <i class="ti ti-brand-whatsapp"></i> Chat Now
+        </a>
+      </div>
+      <div class="wa-number-box">
+        <i class="ti ti-brand-whatsapp"></i>
+        <div>
+          <div class="num-label">WhatsApp Number</div>
+          <div class="num-val">+91 97876 71218</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GUARANTEE -->
+    <div class="guarantee">
+      <div class="g-item"><i class="ti ti-shield-check"></i>100% Safe & Legit</div>
+      <div class="g-item"><i class="ti ti-clock"></i>5-Min Delivery</div>
+      <div class="g-item"><i class="ti ti-refresh"></i>Free Revision</div>
+      <div class="g-item"><i class="ti ti-headset"></i>24/7 Support</div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 <span>FF Sensi Shop</span> · All rights reserved · WhatsApp: +91 97876 71218</p>
+  </footer>
+
+</body>
+</html>
